@@ -25,7 +25,10 @@ public class JenkinsSetUp {
             logger.info("<<<<<<<<<<>>>>>>>>>>");
 
             testType=Cls_Generic_Methods.getJenkinsConfig("testType").toUpperCase();
+            logger.info("SELECTED TEST TYPE : "+testType);
+
             modules=Cls_Generic_Methods.getJenkinsConfig("testModule").toUpperCase();
+            logger.info("SELECTED TEST MODULE : "+modules);
 
             if(env.isEmpty()){
                 env=Cls_Generic_Methods.getJenkinsConfig("environment").toUpperCase();
