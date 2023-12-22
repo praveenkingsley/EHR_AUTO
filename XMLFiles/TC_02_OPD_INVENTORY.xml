@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="1" name="Smoke_Test" group-by-instances="true" verbose="10">
+	<test thread-count="1" name="Inventory_Smoke_Scripts" group-by-instances="true" verbose="10">
+		<classes>
+			<class name="tests.inventoryStores.opticalStore.PatientQueueTest">
+				<methods>
+					<include name="createPatientToValidatePatientInventoryFollow"/>
+					<include name="createEyeTemplate"/>
+					<include name="validatingPatientDetailsInOpticalStore"/>
+					<include name="validatingPatientDetailsInPharmacyStore"/>
+				</methods>
+			</class> <!-- tests.inventoryStores.opticalStore.PatientQueueTest -->
+			<class name="tests.inventoryStores.pharmacyStore.Items.VariantTest">
+				<methods>
+					<include name="validateAddFunctionalityInItemMaster"/>
+				</methods>
+			</class> <!-- tests.inventoryStores.pharmacyStore.Items.VariantTest -->
+			<class name="tests.inventoryStores.pharmacyStore.Items.LotTest">
+				<methods>
+					<include name="creatingItemForLotFunctionality"/>
+				</methods>
+			</class> <!-- tests.inventoryStores.pharmacyStore.Items.LotTest -->
+			<class name="tests.inventoryStores.pharmacyStore.Transaction.PaymentRequisitionFormTest">
+				<methods>
+					<include name="validateCreatePaymentRequisitionForm"/>
+				</methods>
+			</class> <!-- tests.inventoryStores.pharmacyStore.Transaction.PaymentRequisitionFormTest -->
+			<class name="tests.inventoryStores.pharmacyStore.Transaction.WorkOrderFulfilmentTest">
+				<methods>
+					<include name="validateCreateWorkOrderFulfilment"/>
+				</methods>
+			</class> <!-- tests.inventoryStores.pharmacyStore.Transaction.WorkOrderFulfilmentTest -->
+			<class name="tests.inventoryStores.pharmacyStore.Transaction.SONTest">
+				<methods>
+					<include name="validatingCreateSONTransaction"/>
+				</methods>
+			</class> <!-- tests.inventoryStores.pharmacyStore.Transaction.SONTest -->
+			<class name="tests.inventoryStores.pharmacyStore.TaxInvoiceTest">
+				<methods>
+					<include name="validateCreateTaxInvoice"/>
+				</methods>
+			</class> <!-- tests.inventoryStores.pharmacyStore.TaxInvoiceTest -->
+			<class name="tests.inventoryStores.pharmacyStore.Transaction.IndentTest">
+				<methods>
+					<include name="CreateIndentFromVariant"/>
+				</methods>
+			</class> <!-- tests.inventoryStores.pharmacyStore.Transaction.IndentTest -->
+			<class name="tests.inventoryStores.pharmacyStore.Transaction.PurchaseOrderTest">
+				<methods>
+					<include name="validatePurchaseOrderCreation"/>
+				</methods>
+			</class> <!-- tests.inventoryStores.pharmacyStore.Transaction.PurchaseOrderTest -->
+			<class name="tests.inventoryStores.pharmacyStore.Transaction.RequisitionTest">
+				<methods>
+					<include name="validateCreateRequisition"/>
+				</methods>
+			</class> <!-- tests.inventoryStores.pharmacyStore.Transaction.RequisitionTest -->
+			<class name="tests.inventoryStores.pharmacyStore.Order.SalesOrderTest">
+				<methods>
+					<include name="validateCreatingSalesOrder"/>
+				</methods>
+			</class> <!-- tests.inventoryStores.pharmacyStore.Order.SalesOrderTest -->
+			<class name="tests.inventoryStores.pharmacyStore.Transaction.AdjustmentTest">
+				<methods>
+					<include name="validatingAdjustmentTransactionAndValidateLOT"/>
+				</methods>
+			</class> <!-- tests.inventoryStores.pharmacyStore.Transaction.AdjustmentTest -->
+			<class name="tests.inventoryStores.pharmacyStore.Transaction.DirectStockEntryTest">
+				<methods>
+					<include name="validatingCreateDirectStockEntryTransaction"/>
+				</methods>
+			</class> <!-- tests.inventoryStores.pharmacyStore.Transaction.DirectStockEntryTest -->
+			<class name="tests.inventoryStores.pharmacyStore.Transaction.IssueAndReceiveTest">
+				<methods>
+					<include name="createIssueTransaction"/>
+				</methods>
+			</class> <!-- tests.inventoryStores.pharmacyStore.Transaction.IssueAndReceiveTest -->
+			<class name="tests.inventoryStores.pharmacyStore.Transaction.SaleReturnTest">
+				<methods>
+					<include name="validatingCreateSaleReturnTransaction"/>
+				</methods>
+			</class> <!-- tests.inventoryStores.pharmacyStore.Transaction.SaleReturnTest -->
+			<class name="tests.inventoryStores.pharmacyStore.Transaction.SaleTest">
+				<methods>
+					<include name="validateCancelSaleTransactionFunctionality"/>
+				</methods>
+			</class> <!-- tests.inventoryStores.pharmacyStore.Transaction.SaleTest -->
+			<class name="tests.inventoryStores.pharmacyStore.Transaction.TransferAndReceiveTest">
+				<methods>
+					<include name="cancelTransferTransaction"/>
+				</methods>
+			</class> <!-- tests.inventoryStores.pharmacyStore.Transaction.TransferAndReceiveTest -->
+		</classes>
+	</test> <!-- Inventory_Smoke_Scripts -->
+</suite> <!-- 1 -->

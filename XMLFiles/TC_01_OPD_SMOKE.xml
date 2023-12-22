@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="1" name="Smoke_Test" group-by-instances="true" verbose="10">
+	<test thread-count="1" name="OPD_IPD_Smoke_Scripts" group-by-instances="true" verbose="10">
+		<classes>
+			<class name="tests.departments.opd.ValidateUiTest">
+				<methods>
+					<include name="validatePrimaryNavbar"/>
+					<include name="validateSecondaryNavbar"/>
+					<include name="validateDilation"/>
+				</methods>
+			</class> <!-- tests.departments.opd.ValidateUiTest -->
+			<class name="tests.departments.opd.AddPatientsTest">
+				<methods>
+					<include name="validateAndFillEssentialPatientDetails"/>
+					<include name="clickCreateAppointment"/>
+					<include name="validateAfterAppointmentCreation"/>
+					<include name="validatePatientArrived"/>
+				</methods>
+			</class> <!-- tests.departments.opd.AddPatientsTest -->
+			<class name="tests.departments.opd.CreateBillsTest">
+				<methods>
+					<include name="validateBills"/>
+				</methods>
+			</class> <!-- tests.departments.opd.CreateBillsTest -->
+			<class name="tests.departments.opd.ValidateArNctTest">
+				<methods>
+					<include name="validateSendPatientToArNct"/>
+					<include name="validatePatientArrivedInArNct"/>
+					<include name="createArNctTemplate"/>
+					<include name="validateSendPatientFromArNctToOptometrist"/>
+				</methods>
+			</class> <!-- tests.departments.opd.ValidateArNctTest -->
+			<class name="tests.departments.opd.ValidateOptoTest">
+				<methods>
+					<include name="validatePatientArrivedInOptometrist"/>
+					<include name="createOptometristTemplate"/>
+					<include name="validateSendPatientFromOptometristToDoctor"/>
+				</methods>
+			</class> <!-- tests.departments.opd.ValidateOptoTest -->
+			<class name="tests.departments.opd.ValidateDoctorTest">
+				<methods>
+					<include name="validatePatientArrivedInDoctor"/>
+					<include name="createEyeTemplate"/>
+				</methods>
+			</class> <!-- tests.departments.opd.ValidateDoctorTest -->
+			<class name="tests.departments.ipd.IPDWFTest">
+				<methods>
+					<include name="scheduleAdmissionFromOPD"/>
+					<include name="validateReadyForAdmissionInIpd"/>
+					<include name="validatePatientAdmitToIpd"/>
+				</methods>
+			</class> <!-- tests.departments.ipd.IPDWFTest -->
+			<class name="tests.departments.ipd.IPDFormsTest">
+				<methods>
+					<include name="fillConsentForms"/>
+					<include name="fillPreOperativeForms"/>
+					<include name="fillIntraOperativeTemplateForm"/>
+					<include name="fillPostOperativeTemplateForm"/>
+					<include name="wardTemplateForm"/>
+				</methods>
+			</class> <!-- tests.departments.ipd.IPDFormsTest -->
+		</classes>
+	</test> <!-- Smoke_Scripts -->
+</suite>
