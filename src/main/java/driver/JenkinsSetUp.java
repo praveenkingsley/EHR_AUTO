@@ -59,9 +59,14 @@ public class JenkinsSetUp {
                 }
             }
 
-            TestNG testNG=new TestNG();
-            testNG.setTestSuites(xmlFiles);
-            testNG.run();
+            if(xmlFiles.size()>0){
+                TestNG testNG=new TestNG();
+                testNG.setTestSuites(xmlFiles);
+                testNG.run();
+            }else {
+                logger.fatal("No Test Cases to Run");
+            }
+
 
             logger.info("<<<<<<<<<<>>>>>>>>>>");
             logger.info("ENDING EXECUTION");
