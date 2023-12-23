@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="1" name="Regression_Test" group-by-instances="true" verbose="10">
+	<test thread-count="1" name="OPD_Regression_Scripts" group-by-instances="true" verbose="10">
+		<classes>
+			<class name="tests.departments.opd.ValidateUiTest">
+				<methods>
+					<include name="validatePrimaryNavbar"/>
+				</methods>
+			</class> <!-- tests.departments.opd.ValidateUiTest -->
+
+		</classes>
+	</test> <!-- Smoke_Scripts -->
+</suite>

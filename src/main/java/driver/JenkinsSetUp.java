@@ -36,26 +36,27 @@ public class JenkinsSetUp {
             }
 
             logger.info("Environment selected = " + Cls_Generic_Methods.environment);
+            Cls_Generic_Methods.getJenkinsConfig("ReportPath");
+            Cls_Generic_Methods.setConfigValue("bJenkinsTest","true");
 
             List<String> xmlFiles=new ArrayList<>();
 
-
             if(testType.equalsIgnoreCase("SMOKE")){
                 if(modules.contains("OPD")){
-                    xmlFiles.add("./XMLFiles/TC_01_OPD_SMOKE.xml");
+                    xmlFiles.add("./XMLFiles/Smoke/ST_01_OPD.xml");
                 }
                 if(modules.contains("INVENTORY")){
-                    xmlFiles.add("./XMLFiles/TC_01_OPD_SMOKE.xml");
+                    xmlFiles.add("./XMLFiles/Smoke/ST_02_INVENTORY.xml");
                 }
             }
 
             //ADD TC LATER
             if(testType.equalsIgnoreCase("REGRESSION")){
                 if(modules.contains("OPD")){
-                    xmlFiles.add("./XMLFiles/TC_01_OPD_SMOKE.xml");
+                    xmlFiles.add("./XMLFiles/Regression/RT_01_OPD.xml");
                 }
-                if(modules.contains("INVENTORY")){
-                    xmlFiles.add("./XMLFiles/TC_01_OPD_SMOKE.xml");
+                if(modules.contains("IPD")){
+                    xmlFiles.add("./XMLFiles/Regression/RT_02_IPD.xml");
                 }
             }
 
