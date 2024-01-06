@@ -36,7 +36,7 @@ public class JenkinsSetUp {
             }
 
             logger.info("Environment selected = " + Cls_Generic_Methods.environment);
-            Cls_Generic_Methods.getJenkinsConfig("ReportPath");
+           // Cls_Generic_Methods.getJenkinsConfig("ReportPath");
 
             List<String> xmlFiles=new ArrayList<>();
 
